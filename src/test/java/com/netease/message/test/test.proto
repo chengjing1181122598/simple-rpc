@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package tutorial;
+
+option java_package = "com.netease.message.test";
+option java_outer_classname = "TestProtoMessage";
+
+message User {
+    int32 uid = 1;
+    string name = 2;
+    Account account = 3;
+    repeated int32 score = 4;
+    repeated string special = 5;
+    repeated Address address = 6;
+}
+
+message Account {
+    int64 registerTime = 1;
+    string headUrl = 2;
+    Address address = 3;
+    repeated Address addresses = 4;
+}
+
+message Address {
+    string province = 1;
+    string city = 2;
+    bool isDefault = 3;
+}
+
+message Test {
+}

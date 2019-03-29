@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+group 'com.chengjing'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+//    compile.exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+}
+
+dependencies {
+    compile(
+            "com.google.protobuf:protobuf-java:+",
+            "org.projectlombok:lombok:+"
+    )
+}
